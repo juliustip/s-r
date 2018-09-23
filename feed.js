@@ -38,7 +38,7 @@ module.exports = function (request, response) {
         }
 
         feed.item({
-          author: $(CONFIG.selectors.author, this).text().trim(),
+          author: CONFIG.selectors.author,
           date: Moment(
             date,
             CONFIG.date
