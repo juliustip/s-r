@@ -3,13 +3,13 @@ module.exports = {
   link: 'http://saharareporters.com',
   name: 'Sahara Reporters',
   selectors: {
-    author: '.author',
-    date: '.col-medium-8 .block-module-content-footer-item-date',
+    item: '.col-medium-8 .block-module-story', //This is the main target, once targeted, you only need to target classes under it directly.
+    author: 'Sahara Reporters',// Modified the feed.js to use ordinary text.
+    date: '.block-module-content-footer-item-date',
     dateRegex: /\w+, \w+ \d+, \d+/i,
-    description: '.col-medium-8 span.block-module-content-header-title',
-    item: '.col-medium-8 .block-module-story',
-    title: '.col-medium-8 span.block-module-content-header-title',
-    url: '.col-medium-8 span.block-module-content-header-title a',
+    description: 'span.block-module-content-header-title',
+    title: 'span.block-module-content-header-title',
+    url: 'span.block-module-content-header-title a',
   },
 };
 
