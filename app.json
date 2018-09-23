@@ -1,0 +1,5 @@
+{
+  "name": "web-to-rss",
+  "description": "Turn any website to RSS.",
+  "keywords": ["node", "express", "static"],
+}
