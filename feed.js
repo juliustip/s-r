@@ -43,20 +43,21 @@ module.exports = function (request, response) {
             date,
             CONFIG.date
           ),
-       /*   enclosure : {
+          enclosure : {
             url: $(CONFIG.selectors.thumbnail, this).attr('src').trim(),
             type: 'image/jpeg'
-          }, */
+          }, 
         /*  custom_elements: [
-          {'media:content': {
+          {'image': {
             _attr: {
-              url: '&gt;&lt;'+$(CONFIG.selectors.thumbnail, this).attr('src').trim(),
+              link: url,
+              title: '',
+              url: $(CONFIG.selectors.thumbnail, this).attr('src').trim(),
               width: '300',
-              height: '168',
-              type: 'image/jpeg'
+              height: '168'
             }
             }}],*/
-          description: '&lt;a  href=&quot;'+url+'&quot;&gt;&lt;span class=&#039;image-background-wrapper&#039;&gt;&lt;img class=&quot;&quot; typeof=&quot;foaf:Image&quot; src=&quot;'+$(CONFIG.selectors.thumbnail, this).attr('src').trim()+'&quot; width=&quot;300&quot; height=&quot;168&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;&lt;/a&gt;'+$(CONFIG.selectors.description, this).text().trim(),
+          description: $(CONFIG.selectors.description, this).text().trim(),
           title: $(CONFIG.selectors.title, this).text().trim(),
           url: url,
         });
