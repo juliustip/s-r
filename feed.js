@@ -47,13 +47,16 @@ module.exports = function (request, response) {
             url: $(CONFIG.selectors.thumbnail, this).attr('src').trim(),
             type: 'image/jpeg'
           }, */
-          custom_elements: [
-          {'media:thumbnail': {
+        /*  custom_elements: [
+          {'media:content': {
             _attr: {
-              href: $(CONFIG.selectors.thumbnail, this).attr('src').trim()
+              url: '&gt;&lt;'+$(CONFIG.selectors.thumbnail, this).attr('src').trim(),
+              width: '300',
+              height: '168',
+              type: 'image/jpeg'
             }
-            }}],
-          description: $(CONFIG.selectors.description, this).text().trim(),
+            }}],*/
+          description: '&lt;a  href=&quot;'+url+'&quot;&gt;&lt;span class=&#039;image-background-wrapper&#039;&gt;&lt;img class=&quot;&quot; typeof=&quot;foaf:Image&quot; src=&quot;'+$(CONFIG.selectors.thumbnail, this).attr('src').trim()+'&quot; width=&quot;300&quot; height=&quot;168&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;&lt;/a&gt;'+$(CONFIG.selectors.description, this).text().trim(),
           title: $(CONFIG.selectors.title, this).text().trim(),
           url: url,
         });
