@@ -39,16 +39,16 @@ module.exports = function (request, response) {
 
         feed.item({
           author: CONFIG.selectors.author,
-          date: Moment(
+       /*   date: Moment(
             date,
             CONFIG.date
-          ),
+          ), */
           enclosure : {
             url: $(CONFIG.selectors.thumbnail, this).attr('src').trim(),
             type: 'image/jpeg'
           }, 
-        /*  custom_elements: [
-          {'image': {
+          custom_elements: [
+          /* {'image': {
             _attr: {
               link: url,
               title: '',
@@ -56,7 +56,10 @@ module.exports = function (request, response) {
               width: '300',
               height: '168'
             }
-            }}],*/
+            }}, */
+             {'pubDate': $(CONFIG.selectors.date, this).text().trim() 
+            }
+            ],
           description: $(CONFIG.selectors.description, this).text().trim(),
           title: $(CONFIG.selectors.title, this).text().trim(),
           url: url,
