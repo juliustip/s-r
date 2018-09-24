@@ -8,6 +8,7 @@ module.exports = {
     date: '.block-module-content-footer-item-date',
     dateRegex: /\w+, \w+ \d+, \d+/i,
     description: 'span.block-module-content-header-title',
+    thumbnail: 'span.image-background-wrapper img',
     title: 'span.block-module-content-header-title',
     url: 'span.block-module-content-header-title a',
   },
