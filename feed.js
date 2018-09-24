@@ -43,6 +43,16 @@ module.exports = function (request, response) {
             date,
             CONFIG.date
           ),
+       /*   enclosure : {
+            url: $(CONFIG.selectors.thumbnail, this).attr('src').trim(),
+            type: 'image/jpeg'
+          }, */
+          custom_elements: [
+          {'media:thumbnail': {
+            _attr: {
+              href: $(CONFIG.selectors.thumbnail, this).attr('src').trim()
+            }
+            }}],
           description: $(CONFIG.selectors.description, this).text().trim(),
           title: $(CONFIG.selectors.title, this).text().trim(),
           url: url,
