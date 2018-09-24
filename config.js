@@ -1,6 +1,6 @@
 module.exports = {
   date: 'dddd, MMMM DD, YYYY',
-  link: 'http://saharareporters.com',
+  link: 'https://secure.saharareporters.com',
   name: 'Sahara Reporters',
   selectors: {
     item: '.col-medium-8 .block-module-story', //This is the main target, once targeted, you only need to target classes under it directly.
