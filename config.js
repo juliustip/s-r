@@ -5,7 +5,7 @@ module.exports = {
   selectors: {
     item: '.col-medium-8 .block-module-story', //This is the main target, once targeted, you only need to target classes under it directly.
     author: 'Sahara Reporters',// Modified the feed.js to use ordinary text.
-    date: '.block-module-content-footer-item-date',
+    date: 'div.block-module-content-footer-item-date',
     dateRegex: /\w+, \w+ \d+, \d+/i,
     description: 'span.block-module-content-header-title',
     thumbnail: 'span.image-background-wrapper img',
